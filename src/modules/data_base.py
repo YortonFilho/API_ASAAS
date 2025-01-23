@@ -6,7 +6,6 @@ import pandas as pd
 # Função de logging
 logger = get_logger()
 
-# Função para conectar com banco de dados
 def db_connection():
     connection_data = f"DSN={DB_NAME};UID={DB_USER};PWD={DB_PASSWORD}"
 

@@ -4,7 +4,6 @@ from modules.logger import get_logger
 # função para gerar logs
 logger = get_logger()
 
-# Função para verificar se o valor é um diciconario ou lista
 def is_dict_or_list(x):
     return isinstance(x, dict) or isinstance(x, list)
 
@@ -29,7 +28,6 @@ def normalize_columns(df):
                 df = pd.concat([df.drop(columns=[column]), array_df], axis=1)
     return df
 
-# Função para tratar os dados de pagamentos 
 def process_payments_data(data):
     """
     Processa e formata dados do endpoint "payments", incluindo conversões de colunas de data e 
@@ -78,7 +76,8 @@ def process_payments_data(data):
             'RECEIVED': 'RECEBIDO',
             'OVERDUE': 'VENCIDO',
             'PENDING': 'PENDENTE',
-            'CHARGEBACK_DISPUTE': 'DISPUTA DE CHARGEBACK'
+            'CHARGEBACK_DISPUTE': 'DISPUTA DE ESTORNO',
+            'CHARGEBACK_REQUESTED': 'SOLICITAÇÃO DE ESTORNO'
         }
         df_filtered['STATUS'] = df_filtered['STATUS'].replace(status_translation)
 

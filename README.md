@@ -12,7 +12,7 @@ Projeto feito usando módulos e funções, para facilitar tanto a manutenção q
 A estrutura do projeto é dividida nos seguintes módulos:
 
 ### 1. **main.py**
-Este é o arquivo principal que orquestra a execução do pipeline de dados. Ele integra a extração, processamento e atualização dos dados no banco de dados. O fluxo de execução ocorre da seguinte maneira:
+Este é o arquivo principal que executa as principais funções. Ele integra a extração, processamento e atualização dos dados no banco de dados. O fluxo de execução ocorre da seguinte maneira:
 - Extração de Dados: Dados são extraídos de um endpoint da API especificado.
 - Processamento de Dados: Os dados extraídos são processados por uma função específica de tratamento.
 - Atualização no Banco de Dados: Após o processamento, os dados são inseridos na tabela correspondente no banco de dados.
@@ -45,5 +45,5 @@ Cada módulo é projetado para ser independente, permitindo fácil manutenção 
 - `DB_NAME`=nome-do-banco
 - `DB_USER`=usuario-do-banco
 - `DB_PASSWORD`=senha-do-banco
-- `API_URL`=URL base da API.
-- `API_KEY`=Chave token de acesso à API.
+- `API_URL`=url-base-api.
+- `API_KEY`=token-api.

@@ -12,7 +12,7 @@ def extract_data(endpoint, start_date=None, end_date=None):
     intervalo de datas para todas as requisições. 
 
     :param endpoint: O ponto de extremidade da API a ser acessado, por exemplo: 'payments',
-                    'clients','subscriptions'.
+    'clients','subscriptions'.
     """
 
     # Lista vazia para inserir os dados
@@ -42,6 +42,8 @@ def extract_data(endpoint, start_date=None, end_date=None):
 
             # Extrai a lista de dados da chave 'data'
             data = response_data.get("data", [])
+
+            # Quando não tiver mais dados, encerra o laço de repetição.
             if not data:
                 break
 

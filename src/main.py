@@ -37,13 +37,13 @@ def run_pipeline(endpoint, table, function, start_date=None, end_date=None):
 
 def main():
     # Datas para os endpoints
-    start_date = "2023-05-01"
+    start_date = "2023-01-01"
     end_date = datetime.now().strftime("%Y-%m-%d")
 
     # Configurações para os endpoints e tabelas
     pipelines = [
-        {"endpoint": "payments", "table": "DADOS_ASAAS_PAYMENTS", "process_function": process_payments_data},
-        {"endpoint": "customers", "table": "DADOS_ASAAS_CUSTOMERS", "process_function": process_customers_data}
+        {"endpoint": "payments", "table": "DADOS_API_ASAAS_PAYMENTS", "process_function": process_payments_data},
+        {"endpoint": "customers", "table": "DADOS_API_ASAAS_CUSTOMERS", "process_function": process_customers_data}
     ]
 
     # Executando o pipeline para cada configuração
